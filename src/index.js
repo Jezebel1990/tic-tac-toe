@@ -3,23 +3,27 @@ import  ReactDOM from 'react-dom';
 
 import './index.css';
 
-const Square = () => {
+const Square = (props) => {
   return (
-    <div style={{
-      backgroundColor: 'gold',
-      margin: 10,
-      padding: 20,
-    }}>
-   Square
+    <div  className='square'>
+      {props.value}
     </div>
-  )
-}
+  );
+};
 
 
 
 
 
 const Board = () => {
+const renderSquare = (i) => {
+  return (
+    <Square value={i}/>
+  );
+};
+
+
+
   return (
     <div style={{
       backgroundColor: 'skyblue',
@@ -27,7 +31,18 @@ const Board = () => {
       padding: 20,
     }}>
       Board
-<Square />
+
+      <div className='board-row'>
+    {renderSquare()}{renderSquare()}{renderSquare()}
+      </div>
+
+      <div className='board-row'>
+      {renderSquare()}{renderSquare()}{renderSquare()}
+      </div>
+      
+      <div className='board-row'>
+      {renderSquare()}{renderSquare()}{renderSquare()}
+      </div>
     </div>
   );
 };
@@ -36,12 +51,7 @@ const Board = () => {
 
 const Game = () => {
   return (
-<div style={{
-  backgroundColor: 'salmon',
-  margin: 10,
-  padding: 20,
-
-}}>
+<div className="game">
 Game
 <Board/>
 </div>
