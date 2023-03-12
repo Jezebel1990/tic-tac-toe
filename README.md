@@ -4,7 +4,7 @@ Seja bem vindo(a), este código foi desenvolvido em React Js.
 
 
 ## Preview
-<img width=100% src="./static/img/tic_toc_demo.gif">
+<img width=80% src="./static/img/tic_toc_demo.gif">
 
 
 ## Live demo
